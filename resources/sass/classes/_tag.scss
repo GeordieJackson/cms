@@ -1,0 +1,16 @@
+.tag {
+  border: 1px solid #555555;
+  font-size: 0.85rem;
+  border-radius: 0.3rem;
+  padding: 0.2rem 0.4rem;
+  display: inline-block;
+//  vertical-align: top;
+  text-decoration: none;
+  margin: 0.25rem 0.3rem 0.25rem 0;
+  background-color: #eeeeee;
+
+  &:hover {
+    background-color: #555;
+    color: #fff;
+  }
+}

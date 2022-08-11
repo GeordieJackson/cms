@@ -1,0 +1,30 @@
+.navbar {
+
+  color: #fff;
+  background: linear-gradient(#55595C, #000407);
+  border-top: 2px solid #55595C;
+  border-bottom: 2px solid #000407;
+
+  &-menu {
+    display: flex;
+    align-items: center;
+  }
+
+  &-hamburger {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 2.25rem;
+    margin-left: 0.5rem;
+  }
+
+  @media(min-width: $tablet) {
+    justify-content: flex-start;
+
+    &-hamburger {
+      display: none;
+    }
+  }
+}

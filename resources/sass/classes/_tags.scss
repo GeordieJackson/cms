@@ -1,0 +1,13 @@
+.tags {
+
+  &-body {
+    padding: 0.5rem 0 0 0;
+    background: #ffffff;
+    margin-bottom: 3rem;
+  }
+
+  @media(min-width: $small-screen) {
+    flex-direction: column;
+  }
+
+}

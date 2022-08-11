@@ -1,0 +1,39 @@
+.actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 2rem;
+    width: 100%;
+    max-width: $container-width;
+    margin: 0 auto;
+    font-weight: normal;
+    font-size: 0.95rem;
+    border-right: 1px solid #666;
+    border-left: 1px solid #666;
+    background: #fff;
+
+    & ul {
+        margin: 0.5rem 0;
+        list-style: none;
+        display: inline-flex;
+        padding: 0;
+
+        & li {
+            margin-left: 1rem;
+
+            & button {
+                background: transparent;
+                border: none;
+                font-size: inherit;
+                font-weight: inherit;
+                padding: 0;
+                margin: 0;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

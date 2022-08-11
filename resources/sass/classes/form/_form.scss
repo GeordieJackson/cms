@@ -1,0 +1,94 @@
+.form {
+
+    &-container {
+        background: linear-gradient(#f6f6f6, #f0f0f0);
+        padding: 2rem 2rem 1rem;
+        border: 1px solid #666;
+        border-radius: 0.5rem;
+        margin: 0 1rem;
+    }
+
+    &-row {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+
+        & label {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex: 1;
+            font-weight: bold;
+            padding: 0.2rem 0;
+        }
+
+        & input:not([type=checkbox]) {
+            flex: 1;
+            padding: 0.5rem 0.5rem;
+            border: 1px solid #666;
+            font-size: 1rem;
+
+            &:focus {
+                box-shadow: 0px 0px 2px 2px $highlight;
+            }
+        }
+
+        & button {
+            margin-left: auto;
+        }
+    }
+
+    &-last-label {
+        border-bottom: 1px solid #666;
+    }
+
+    &-error {
+        font-size: 0.8rem;
+        color: red;
+        margin-left: auto;
+        padding-right: 1rem;
+
+        ~ input {
+            border: 1px solid red;
+        }
+    }
+
+    @media(min-width: $tablet) {
+
+        &-container {
+            padding: 3rem 3rem 0;
+        }
+
+        &-row {
+            flex-direction: row;
+            margin-bottom: 1.75rem;
+
+            & label {
+                position: relative;
+                flex: 0 0 10rem;
+                justify-content: flex-end;
+                padding-right: 1rem;
+            }
+        }
+
+        &-last-label {
+            border-bottom: 0;
+            border-right: 1px solid #666;;
+        }
+
+        &-error {
+            position: absolute;
+            top: -1rem;
+            left: 100%;
+            width: 20rem;
+            font-size: 0.8rem;
+            color: red;
+            margin-left: auto;
+            padding-right: 1rem;
+
+            ~ input {
+                border: 1px solid red;
+            }
+        }
+    }
+}

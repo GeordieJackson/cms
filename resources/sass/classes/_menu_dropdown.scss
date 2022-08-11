@@ -1,0 +1,224 @@
+/*
+	With this system, the div above the parent UL has the class attached.
+	Each UL is targetted simply by using ul, ul ul, ul ul ul, etc.
+	The targetted ul's LIs and anchors are included in each ul declaration and styled accordingly.
+	Subsequent ULs have the same structure as the parent UL (i.e. LIs and As). This means that sibling ULs will inherit CSS attributes from its parent unless they're overwritten - the ability to do so is what the structure is for. It's CSS's specificity rules that allows this simple solution to this problem.
+
+	The parent UL's LIs can be set to 'inline-flex' for horizontal display or just 'flex' for vertical display. Either if there's only one parent! Submenus can also use either of these values to dropdown or pop out if required..
+
+	Setting LIs to flex column expands the padding around the anchors so they fill the LI (when its padding is set to 0 that is). This is very useful for touchscreen devices as the click area is maximused.
+
+	This menu's CSS targeting system can be the basis for many other menu systems. All that needs to be changed is the CSS attributes of each UL/LI combination to achieve different display properties. e.g. changing the UL's top and left parameters change its pop out or dropdown position without needing to do much else.
+
+	This works with vanilla HTML nested ULs. Apart from the class being applied to the parent UL, there's no further subclasses or wrappers, etc. needed.
+
+	The only assumption made is that dropdown menu labels use placeholder anchors - which is what they're for (i.e. should be standard practice anyway).
+*/
+
+.menu_dropdown {
+
+    &--hamburger {
+
+        //  margin: 1rem;
+        background: linear-gradient(to bottom, #333, #222);
+
+        & span {
+            color: #fff;
+            padding: 1.5rem 2rem;
+        }
+    }
+
+    //  display: none;
+    width: 75%;
+    padding: 0;
+    margin-bottom: 2rem;
+
+    & ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        & > li {
+            background: linear-gradient(to bottom, #666, #333);
+
+            &:hover {
+                background: linear-gradient(to bottom, #6a8, #042);
+            }
+        }
+
+        & a {
+            padding: 1rem 2rem;
+            display: flex;
+            color: #fff;
+
+            &:not([href]) { // i.e. select placeholder anchors
+
+                &:hover {
+                    background: linear-gradient(to bottom, #999, #333);
+                    cursor: default;
+                    color: #fff;
+                }
+
+                &:after {
+                    content: "\25bc";
+                    margin: 0 0 0 0.6rem;
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    & ul  ul { // Level 2
+
+        & li {
+
+            // display: none;
+            padding-left: 2rem;
+
+            & a {
+
+
+                &:hover {
+
+                }
+
+                &:not([href]) { // i.e. select placeholder anchors
+
+                    color: yellow;
+
+                    &:hover {
+
+                    }
+
+                    &:after {
+
+                    }
+                }
+            }
+        }
+    }
+
+
+    & ul ul ul {
+
+        & li {
+             display: none;
+
+
+            & a {
+                //
+
+                &:hover {
+
+                }
+
+                &:not([href]) { // i.e. select placeholder anchors
+
+                    color: red;
+
+                    &:hover {
+
+                    }
+
+                    &:after {
+
+                    }
+                }
+            }
+        }
+    }
+
+    @media(min-width: $tablet) {
+
+        &--hamburger {
+            display: none;
+        }
+
+        margin-bottom: 0;
+
+        display: flex;
+        ul {
+            padding: 0 2rem 0 0;
+            margin: 0;
+
+            & li {
+                display: inline-flex; // display flex for vertical menu.
+                flex-direction: column;
+                position: relative;
+                justify-content: center;
+                text-align: center;
+                min-width: 100px;
+                padding: 2px 0;
+                margin: 0; // Space between buttons
+                background: transparent;
+                border-bottom: 2px solid transparent;
+
+
+                & a {
+
+                    padding: 0.65rem 1rem;
+
+                    &:hover {
+                        //color: $yellow;
+                    }
+
+                    &:not([href]):after { // i.e. select placeholder anchors
+                        content: "\25bc";
+                        margin: 0 0 0 0.6rem;
+
+                        &:hover {
+                            cursor: crosshair;
+                        }
+                    }
+                }
+
+                &:hover {
+                    //  border-bottom: 2px solid red;
+                    // background: linear-gradient(to bottom, #f6f6f6, #888);
+                    //  color: #000;
+                    & > ul { // Displays the submenu
+                        left: 0;
+                    }
+                }
+            }
+        }
+
+        ul ul { // First dropdown
+            position: absolute;
+            left: -9999px;
+            //  border-top: 3px solid #000; // Match container border
+            top: 100%;
+            background: #444;
+            width: max-content;
+            min-width: 165px; // Set this value to avoid very narrow dropdowns
+            padding: 0;
+
+            li {
+                display: flex;
+                margin: 0;
+                text-align: left;
+
+                &:hover {
+
+                    & > ul { // Displays the submenu
+                        left: 100%;
+                        top: 0;
+                    }
+                }
+            }
+
+            a {
+                color: #fff;
+
+                &:not([href]):after { // i.e. select placeholder anchors
+                    content: "\25ba";
+                    margin: 0 0 0 0.75rem;
+                    float: right;
+                }
+            }
+        }
+        ul ul ul { // second and subsequent dropdowns - attributes are inhereted from ul ul and ul. Only set attributes to override earlier ones where needed
+            border: 0;
+        }
+    }
+}

@@ -1,0 +1,46 @@
+﻿.layout {
+
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 16rem 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "nav" "display";
+
+  &-nav {
+    display: flex;
+    flex-direction: column;
+    background: #333;
+    color: #fff;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &-display {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3rem 6rem 1fr;
+    grid-template-areas: "power" "head" "body";
+
+    &-powerbar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding-right: 4rem;
+      background: #333;
+      color: #fff;
+    }
+
+    &-head {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #c0c7cf;
+      position: relative;
+    }
+
+    &-body {
+      background: #fff;
+      padding: 4rem;
+    }
+  }
+}

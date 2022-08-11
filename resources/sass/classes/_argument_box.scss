@@ -1,0 +1,27 @@
+.argument_box {
+    margin: 1rem 0;
+    padding-bottom: 1em;
+
+    & div {
+        display: flex;
+        padding: 0;
+
+        & p:nth-of-type(odd) {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            flex: 1;
+            font-weight: bold;
+            padding: 0.5em 1em;
+        }
+
+        & p:nth-of-type(even) {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            font-weight: normal;
+            padding: 0.5em 1em 0.5em 0;
+            flex: 9;
+        }
+    }
+}

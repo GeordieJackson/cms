@@ -1,0 +1,17 @@
+@tailwind base;
+
+input:invalid, textarea:invalid, select:invalid {
+    box-shadow: none;
+}
+
+@tailwind components;
+
+@import 'classes/responsive_menu/classes';
+@import 'classes/responsive_table';
+
+@tailwind utilities;
+
+[x-cloak] {
+    display: none;
+}
+

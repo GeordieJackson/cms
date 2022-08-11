@@ -1,0 +1,89 @@
+.display {
+
+  $sidebar-width: 25%;
+
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: $content-width;
+  flex: 1;
+
+  &-content {
+    flex: 20; // Large flex value to keep sidebar at correct size (!)
+    padding: 0 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  &-sidebar {
+    display: flex;
+    flex-direction: column;
+
+    &-start {
+      order: 1;
+      width: 100%;
+      background: transparent;
+    }
+
+    &-end {
+      order: 2;
+      width: 100%;
+      background: transparent;
+    }
+
+    &-left {
+      order: 1;
+      width: 100%;
+      background: transparent;
+    }
+
+    &-right {
+      order: 2;
+      flex: 1 1 auto;
+      padding: 0 1rem;
+    }
+  }
+
+  @media(min-width: $small-screen) {
+
+    width: $content-width;
+    max-width: $content-width;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: center;
+
+    &-content {
+      padding: 0 2rem 2rem 2rem; // Zero at top as breadcrumb has the padding
+    }
+
+    &-sidebar {
+      flex-direction: row;
+
+      &-start {
+        order: 0;
+        width: $sidebar-width;
+      }
+
+      &-end {
+        width: $sidebar-width;
+      }
+
+      &-left {
+        order: 0;
+        width: $sidebar-width * 1.25;
+      }
+
+      &-right {
+        flex: 1 0 $sidebar-width * 1;
+        padding: 8rem 1rem 1rem 0;
+      }
+    }
+  }
+
+  @media(min-width: $large-screen) {
+    &-sidebar {
+      &-right {
+        flex: 1 0 $sidebar-width * 1;
+      }
+    }
+  }
+}

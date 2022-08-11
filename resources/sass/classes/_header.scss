@@ -1,0 +1,65 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+
+  &-logo {
+    display: flex;
+    flex: 2;
+    padding-top: 1rem;
+
+    & img {
+      width: 100%;
+      max-width: 540px;
+      height: auto;
+    }
+  }
+
+  &-nav {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
+    border-top: 1px solid #222;
+
+    & ul {
+      padding-right: 1rem;
+
+      & li {
+        display: inline-flex;
+        padding: 0;
+        border-bottom: 2px solid transparent;
+
+        & a, button {
+          color: #333;
+          font-size: 1rem;
+          font-weight: bold;
+          // For logout button
+          background: transparent;
+          border: none;
+          //
+
+          &:hover {
+            color: $highlight;
+          }
+        }
+      }
+    }
+  }
+
+
+  @media(min-width: $tablet) {
+    flex-direction: row;
+    max-width: $content-width;
+    align-items: flex-start;
+
+    &-logo {
+
+    }
+
+    &-nav {
+      padding: 1rem 1rem 0 0;
+      border-top: none;
+    }
+  }
+}

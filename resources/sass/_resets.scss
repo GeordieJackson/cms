@@ -1,0 +1,34 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    color: #000;
+    background: #666666;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+
+    &:hover {
+        color: $highlight;
+    }
+}
+
+h1, h2 {
+    font-weight: 400;
+}
+
+input:invalid, textarea:invalid, select:invalid {
+    box-shadow: none;
+}
+
+input {
+    padding: 0.25rem 0.5rem;
+    width: 100%;
+}
+
+select {
+    width: 100%;
+    padding: 0.25rem 1rem 0.25rem 0.5rem;
+}

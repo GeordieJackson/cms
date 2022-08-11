@@ -1,0 +1,37 @@
+.listing_sidebar {
+  display: flex;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  border-bottom: 1px dashed #999;
+
+  &-img {
+    width: 90px;
+    height: 90px;
+  }
+
+  &-body {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0.75rem;
+  }
+
+  &-title {
+    padding-bottom: 0.5rem;
+
+    & h1 {
+      font-size: 1.1rem;
+      margin: 0;
+      padding-bottom: 0;
+      font-weight: bold;
+    }
+  }
+
+  &-subtitle {
+    font-size: 0.8rem;
+    line-height: 1rem;
+  }
+
+  @media(min-width: $small-screen) {
+
+  }
+}

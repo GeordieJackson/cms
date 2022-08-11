@@ -1,0 +1,100 @@
+/*
+These css classes are for inclusion when the tinyMCE editor is being used so that css used in articles can be displayed in the editor
+*/
+.prose {
+  font-size: 1.15rem;
+  line-height: 1.5rem;
+  padding: 0rem 2rem 1rem;
+  color: #333;
+  /*  NOTE: This is used for the argument box display*/
+}
+.prose h3 {
+  font-size: 1.6rem;
+  margin: 1.5rem 0;
+}
+.prose figure {
+  grid-column: 1/-1;
+  margin: 1rem 0;
+}
+.prose ol, .prose ul {
+  margin: 2rem 0;
+}
+.prose li {
+  margin-bottom: 0rem;
+}
+.prose a {
+  border-bottom: 2px dashed #397373;
+}
+.prose a:hover {
+  color: #333;
+  background: #ddd;
+}
+.prose blockquote {
+  border-left: 6px solid #888;
+  padding: 1px 1.5rem;
+}
+.prose blockquote p {
+  color: #666;
+}
+.prose footer cite {
+  font-size: 1rem;
+  line-height: 1.1rem;
+}
+.prose footer a {
+  border-bottom: none;
+  color: #1779ba;
+}
+.prose footer a:hover {
+  color: #333;
+  background: #ddd;
+}
+.prose aside {
+  display: block;
+  float: right;
+  width: 9rem;
+  background: #eee;
+  padding: 0.75rem;
+  margin: 0 -2rem 1rem 1rem;
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.1rem;
+  font-style: italic;
+}
+.prose img {
+  float: right;
+  padding: 0 0 1rem 1rem;
+  max-width: 40%;
+  height: auto;
+}
+.prose table {
+  margin-top: -1rem;
+  margin-bottom: 2rem;
+}
+.prose table td {
+  padding: 0.5rem 0.5rem;
+  vertical-align: top;
+}
+.prose table td:nth-of-type(odd) {
+  padding-left: 1rem;
+  text-align: right;
+}
+@media (min-width: 768px) {
+  .prose {
+    max-width: 60rem;
+    /*  NOTE: This is used for the argument box display*/
+  }
+  .prose table td:nth-of-type(odd) {
+    padding-left: 2rem;
+  }
+}
+@media (min-width: 1024px) {
+  .prose {
+    max-width: 60rem;
+    font-size: 1.25rem;
+    line-height: 1.6rem;
+    /*  NOTE: This is used for the argument box display*/
+  }
+  .prose table td:nth-of-type(odd) {
+    padding-left: 3rem;
+  }
+}

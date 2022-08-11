@@ -1,0 +1,120 @@
+// NOTE: these values are set globally in global/_vars.scss (when it's present)
+$tiny: 320px !default;
+$phone: 480px !default;
+$tablet: 768px !default;
+$desktop: 1024px !default;
+$wide: 1200px !default;
+// The global values can be overridden here by setting the width and removing the "!default" declaration.
+// For a global change, alter the global/_vars.scss file.
+
+.form {
+
+  &-error_msg {
+    font-weight: normal;
+    font-size: 0.9em;
+    color: red;
+  }
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 4rem 1rem;
+    background: linear-gradient(to top left, #f6f6f9, #e6e6e9, #f6f6f9);
+    border: 2px solid #666;
+    border-radius: 0.25rem;
+    width: 48rem;
+    margin: 1rem auto auto;
+  }
+
+  margin-top: 0; // NOTE: set this in the container that holds the form as required.
+
+  &-background {
+    padding: 1em;
+    background: linear-gradient(to bottom right, #F3F3F3, #EEE);
+    border: 1px solid #000;
+    //border-top: 0;
+    border-radius: 7px 7px;
+  }
+
+  &-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0.75em 0;
+    align-items: center;
+
+    &-label {
+      font-weight: normal;
+      padding: 0.25em 0;
+      flex: 1 0 100%;
+      text-align: left;
+      font-weight: bold;
+      @media (min-width: $desktop) {
+        flex: 0 0 8em;
+        text-align: right;
+        padding-right: 1em;
+      }
+    }
+
+    &-input {
+      flex: 1 0 auto;
+
+      & input {
+        width: 100%;
+        //max-width: 24em;
+        padding: 0;
+      }
+
+      @media (min-width: $desktop) {
+        flex: 1;
+      }
+    }
+
+    @media (min-width: $desktop) {
+      flex-wrap: nowrap;
+      padding-right: 0;
+    }
+
+    & input, select, textarea {
+      border: 1px solid #666;
+      padding: 0.5em;
+      font-size: 0.85em;
+    }
+
+    & input[type=submit] {
+      margin: 3em 0;
+      padding: 0.5em 1.5em;
+
+    }
+
+    & input[type=radio] {
+      align-self: center;
+      margin: 0 0.5em;
+    }
+
+    & input[type=checkbox] {
+      align-self: center;
+      margin: 0;
+      transform: scale(1.35);
+    }
+
+    &-center {
+      justify-content: center;
+    }
+
+    &-checkbox_large {
+      transform: scale(1.5);
+    }
+
+    &-h { // hide the textarea that's used as a spam honeytrap
+      display: none;
+    }
+  }
+
+  &-invalid {
+    color: red;
+    font-size: 0.9rem;
+    @media (min-width: $desktop) {
+      padding-left: 9rem;
+    }
+  }
+}

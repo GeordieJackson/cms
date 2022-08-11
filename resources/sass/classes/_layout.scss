@@ -1,0 +1,12 @@
+.layout {
+
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  min-height: 100vh;
+  background-color: #fff;
+
+  @media(min-width: $tablet) {
+    max-width: $container-width;
+    margin: 0 auto;
+  }
+}

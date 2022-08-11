@@ -1,0 +1,114 @@
+.article {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    flex: 1;
+
+    //&-spacer {
+    //
+    //    $spacer-size: 2rem;
+    //    $spacer-border-width: 2px;
+    //    $spacer-border-colour: $highlight;
+    //
+    //    border-right: $spacer-border-width solid $spacer-border-colour;
+    //    border-bottom: $spacer-border-width solid $spacer-border-colour;
+    //    width: $spacer-size;
+    //    margin: 0 0 $spacer-size 0;
+    //
+    //    &-b {
+    //        height: $spacer-size;
+    //        border-top: $spacer-border-width solid $spacer-border-colour;
+    //        border-left: $spacer-border-width solid $spacer-border-colour;
+    //        margin-left: -$spacer-border-width;
+    //    }
+    //}
+
+    &-header {
+        display: flex;
+        color: #333;
+        align-self: stretch;
+        padding: 0 0 0.25rem 0;
+        margin: 0 1rem;
+        text-wrap: normal;
+     //   background-color: #f3f3f3;
+
+        & h1 {
+            font-size: 1.5rem;
+            line-height: 1.5rem;
+            color: #333;
+            margin: 0 0.25rem;
+            margin-left: 0.5rem;
+            padding: 1.5rem 0 0;
+        }
+
+        & h2 {
+            font-size: 0.95rem;
+            padding: 0.25rem;
+            margin: 0 0 0 0.5rem;
+        }
+
+        & a {
+            color: #66e;
+
+            &:hover {
+                color: $highlight;
+            }
+        }
+
+        address {
+            font-size: 0.8rem;
+            font-weight: 400;
+            padding-right: 1rem;
+            margin-left: auto;
+            padding-top: 0.5rem;
+        }
+    }
+
+    &-footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        width: 100%;
+        max-width: $max-text-width;
+        padding: 1rem 0;
+        color: #fff;
+      //  background: #2B6CB0;
+    }
+
+    @media(min-width: $tablet) {
+
+        max-width: $content-width;
+        margin: 0 auto;
+
+        & header {
+            max-width: $max-text-width;
+
+            h1 {
+                font-weight: bold;
+                font-size: 2rem;
+                line-height: 2.2rem;
+                margin-bottom: 0.75rem;
+                margin-left: 0.5rem;
+                margin-right: -2rem;
+            }
+
+            h2 {
+                font-size: 1.1rem;
+                margin-left: 0.75rem;
+            }
+        }
+
+    }
+
+    @media(min-width: $small-screen)  {
+
+        &-header {
+            margin: 0;
+        }
+    }
+
+}

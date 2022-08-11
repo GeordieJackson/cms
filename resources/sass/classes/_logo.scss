@@ -1,0 +1,128 @@
+$logo-border-width: 4px;
+$logo-line-length: 3rem;
+$logo-gap: 0.45rem;
+
+.logo {
+  // border: 1px solid #000;
+  width: 20rem;
+  height: 4rem; // It needs a height to compensate for the absolute positioning
+  position: relative;
+
+  &-box {
+    &--outer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: $logo-line-length;
+      height: $logo-line-length;
+      border-top: $logo-border-width solid #333;
+      border-left: $logo-border-width solid #333;
+    }
+
+    &--inner {
+      position: absolute;
+      top: $logo-gap;
+      left: $logo-gap;
+      width: $logo-line-length;
+      height: $logo-line-length;
+      border-top: $logo-border-width solid $highlight;
+      border-left: $logo-border-width solid $highlight;
+    }
+  }
+
+  &-inner {
+    //border: 1px solid red;
+    position: absolute;
+    top: $logo-gap *3;
+    left: $logo-gap * 2.6;
+    font-family: "Arial Rounded MT Bold", sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2rem;
+
+    &--h1 {
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    &--h2 {
+      color: #888;
+      margin: 0;
+      padding: 0;
+    }
+
+    &--tagline {
+      color: #333;
+      font-size: 1rem;
+      position: absolute;
+      top: $logo-gap * 8;
+      left: $logo-gap * 8;
+      font-weight: 700;
+    }
+  }
+
+  @media(min-width: $tablet) {
+    width: 28rem;
+    height: 5rem; // It needs a height to compensate for the absolute positioning
+    margin-left: 2rem;
+
+    &-box {
+      &--outer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: $logo-line-length;
+        height: $logo-line-length;
+        border-top: $logo-border-width solid #333;
+        border-left: $logo-border-width solid #333;
+      }
+
+      &--inner {
+        position: absolute;
+        top: $logo-gap;
+        left: $logo-gap;
+        width: $logo-line-length;
+        height: $logo-line-length;
+        border-top: $logo-border-width solid $highlight;
+        border-left: $logo-border-width solid $highlight;
+      }
+    }
+
+    &-inner {
+      //border: 1px solid red;
+      position: absolute;
+      top: $logo-gap *3.8;
+      left: $logo-gap * 3;
+      font-family: "Arial Rounded MT Bold", sans-serif;
+      font-weight: bold;
+      font-size: 2.6rem;
+      margin: 0;
+      padding: 0;
+      line-height: 1.2rem;
+
+      &--h1 {
+        color: #333;
+        margin: 0;
+        padding: 0;
+      }
+
+      &--h2 {
+        color: #888;
+        margin: 0;
+        padding: 0;
+      }
+
+      &--tagline {
+        color: #333;
+        font-size: 1rem;
+        position: absolute;
+        top: $logo-gap * 10;
+        left: $logo-gap * 16;
+        font-weight: 700;
+      }
+    }
+  }
+}

@@ -1,0 +1,186 @@
+.blog {
+
+    $blog-border-radius: 10px;
+    $blog-body-height: 12rem;
+
+    display: flex;
+    flex-direction: column;
+
+    &-item {
+        display: flex;
+        flex-direction: column;
+        margin: 1rem;
+        border: 1px solid #999999;
+        padding: 0;
+        width: 92%;
+        box-sizing: border-box;
+
+        &-link {
+            color: #333;
+
+            &:hover, a:focus {
+            //    color: $red;
+            }
+        }
+
+        &-header {
+
+            display: flex;
+            flex-direction: column;
+           // background: linear-gradient(to bottom, #eee, #ccc);
+         //   border-radius: $blog-border-radius $blog-border-radius 0 0;
+            padding: 1rem 1rem 0.25rem 0rem;
+            background: linear-gradient(to right, #ddd, #eee 75%, #ddd);
+            border-bottom: 1px solid #ccc;
+
+            &-title {
+                display: flex;
+                align-items: center;
+                flex: 1;
+
+                & h1 {
+                    flex: 1;
+                    padding: 0;
+                    margin: 0;
+                    text-shadow: 1px 1px #fff;
+                    margin-bottom: 0.75rem;
+                    font-size: 1.6rem;
+                    font-weight: bold;
+                    line-height: 1.75rem;
+                    padding: 0 1rem;
+                }
+            }
+
+            &-subtitle {
+                display: flex;
+                align-items: center;
+                flex: 1;
+                padding: 0;
+                margin: 0 0 0 auto;
+                font-size: 0.85rem;
+                //padding: 0.5rem 1rem;
+            }
+        }
+
+        &-body {
+
+            display: flex;
+            height: $blog-body-height;
+            background: #ffffff;
+      //      border-radius: 0 0 $blog-border-radius $blog-border-radius;
+
+            &-image {
+                flex: 0 0 $blog-body-height;
+            //    max-width: $blog-body-height / 1.25;
+                max-width: $blog-body-height / 2.25;
+                height: 100%;
+
+                & img {
+                    object-fit: cover;
+                    object-position: center; /* Center the image within the element */
+                    width: 100%;
+                    height: 100%;
+               //     border-radius: 0 0 0 $blog-border-radius;
+                }
+            }
+
+            &-summary {
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+                padding: 0.5rem 1rem;
+                font-size: 1.05rem;
+                line-height: 1.5rem;
+                overflow: auto;
+
+                & p {
+                    margin: 0;
+                }
+
+                & img {
+                    display: none; // Hide the images in the summary
+                }
+            }
+        }
+
+        &-footer {
+            flex: 1;
+            align-items: center;
+            padding: 0.5rem 1rem;
+        }
+
+    }
+
+    @media(min-width: $small-screen + 1) {
+
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+      //  padding-left: 0.5rem;
+
+        &-item {
+
+            margin: 0 0 2rem;
+            flex: 1 0 auto;
+            max-width: 48%;
+
+            &--first {
+                max-width: 100%;
+            }
+
+            &:nth-of-type(odd) {
+                margin-left: auto; // Pushes 2nd one to other side + keeps self left aligned
+            }
+
+            &-header {
+
+        //        min-height: 4.5rem;
+
+                &:hover {
+
+                }
+
+                &-title {
+
+
+                    & h1 {
+
+                    }
+
+
+                }
+
+                &-subtitle {
+
+                }
+            }
+
+            &-body {
+
+
+
+                &-image {
+                    max-width: $blog-body-height;
+
+                    & img {
+
+                    }
+                }
+
+                &-summary {
+
+
+                    & p {
+
+                    }
+                }
+            }
+
+            &-footer {
+
+            }
+
+        }
+    }
+}
+

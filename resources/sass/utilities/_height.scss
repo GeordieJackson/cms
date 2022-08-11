@@ -1,0 +1,25 @@
+$basename: '.h';
+$cssName: height;
+$variants: ('');
+
+$start: 0;
+$end: 20;
+$prefix: '-';
+$interval: 0.25;
+$unit: rem;
+
+
+@each $variant in $variants {
+
+  @for $x from $start through $end {
+
+    #{$basename}#{str-slice($variant, 0 , 1)}#{$prefix}#{$x} {
+
+      @if ($variant == '') {
+        #{$cssName}: ($interval * $x) + #{$unit};
+      }
+
+    }
+
+  }
+}

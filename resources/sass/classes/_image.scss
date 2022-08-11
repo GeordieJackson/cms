@@ -1,0 +1,17 @@
+.image {
+
+  &-right {
+    float: right;
+    padding: 0 0 1rem 1rem;
+    clear: both;
+    max-width: 50%;
+    height: auto;
+  }
+
+  &-left {
+    float: left;
+    padding: 0 1rem 1rem 0;
+    max-width: 50%;
+    height: auto;
+  }
+}

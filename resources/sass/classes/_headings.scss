@@ -1,0 +1,124 @@
+.headings {
+
+  &-sidebar {
+    margin: 0;
+    text-transform: uppercase;
+  //  border-bottom: 3px solid $highlight;
+    margin-bottom: 0.75rem;
+  }
+
+  &-box {
+    border: 1px solid #999;
+    padding: 1rem;
+  }
+
+  &-title {
+
+    $h-search-color: $lowlight;
+
+    padding: 0;
+    margin: 0;
+    border-bottom: 2px solid $h-search-color;
+
+    & h4 {
+      color: #eeeeee;
+      margin: 0;
+      padding: 0.5rem 0 0.35rem 0;
+
+      & span {
+        margin: 0;
+        background-color: $h-search-color;
+        padding: 0.5rem 2rem;
+      }
+    }
+  }
+
+  &-page {
+    display: flex;
+    color: #333;
+    padding: 0 0 0.25rem 0;
+    margin: 0 1rem 2rem 0;
+    text-wrap: normal;
+    width: 100%;
+
+    &-body {
+      flex: 1 1 auto;
+    }
+
+    & h1 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      line-height: 1.75rem;
+      color: #333;
+      margin: 0;
+      margin-left: 0.5rem;
+      padding: 1rem 0 1rem 0.5rem;
+    }
+
+    & h2 {
+      font-size: 1.1rem;
+      padding: 0 0 0.5rem 1rem;
+      margin: 0;
+    }
+
+    address {
+      font-size: 0.95rem;
+      font-weight: 400;
+      margin: 0 0 0 auto;
+      padding: 0.5rem 1rem 0 1rem;
+
+      & a {
+        color: #333;
+
+        &:hover {
+          color: $highlight;
+        }
+      }
+    }
+
+    &-spacer {
+
+      $spacer-size: 2rem;
+      $spacer-border-width: 2px;
+      $spacer-border-colour: $lowlight;
+
+      border-right: $spacer-border-width solid $spacer-border-colour;
+      border-bottom: $spacer-border-width solid $spacer-border-colour;
+      width: $spacer-size;
+      margin: 0 0 $spacer-size 0;
+
+      &-b {
+        height: $spacer-size;
+        border-top: $spacer-border-width solid $spacer-border-colour;
+        border-left: $spacer-border-width solid $spacer-border-colour;
+        margin-left: -$spacer-border-width;
+      }
+    }
+
+    @media(min-width: $tablet) {
+
+      & h1 {
+        font-size: 1.75rem;
+        line-height: 2rem;
+      }
+    }
+
+    @media(min-width: $small-screen) {
+      & h1 {
+        font-size: 2rem;
+        line-height: 2.25rem;
+      }
+    }
+  }
+
+  &-pageList {
+    margin-bottom: 2rem;
+    padding: $title-box-padding;
+    border-left: 2px solid $highlight;
+    border-bottom: 6px double #000;
+    text-shadow: 2px 2px #fff;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+}

@@ -1,0 +1,78 @@
+﻿@mixin dashbox {
+  display: flex;
+  flex:1 0 25rem;
+  margin: 0.5rem;
+}
+
+.dashbox {
+
+  &-icon {
+    display: flex;
+    @include centered;
+    padding: 0.5rem 0 0.5rem 1rem;
+    flex: 1 0 3rem;
+  }
+
+  &-message {
+    flex: 10;
+    padding: 0.75rem 1rem;
+
+    &--title {
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+  }
+
+  &-data {
+    display: flex;
+    @include centered;
+    flex: 1 0 3rem;
+    margin-left: auto;
+    font-size: 4rem;
+    padding: 0.25rem 1rem;
+  }
+
+  &-1 {
+    @include dashbox;
+    background: #2B6CB0;
+    color: #fff;
+
+    &--icon {
+      color: #7FCFF9;
+      font-size: 4rem;
+    }
+  }
+
+  &-2 {
+    @include dashbox;
+    background: #319795;
+    color: #fff;
+
+    &--icon {
+      color: #75ECEA;
+      font-size: 4rem;
+    }
+  }
+
+  &-3 {
+    @include dashbox;
+    background: #678;
+    color: #fff;
+
+    &--icon {
+      color: #bcd;
+      font-size: 4rem;
+    }
+  }
+
+  &-4 {
+    @include dashbox;
+    background: #97266D;
+    color: #fff;
+
+    &--icon {
+      color: #EBC;
+      font-size: 4rem;
+    }
+  }
+}

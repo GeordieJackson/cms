@@ -1,0 +1,154 @@
+.listing {
+  margin: 0.5rem;
+
+  &-item {
+    display: flex;
+    flex: 1;
+    margin-bottom: 2rem;
+    height: 75px;
+  }
+
+  &-img {
+    display: flex;
+    flex: 0 0 75px;
+    padding: 0;
+
+    & img {
+      object-position: center; /* Center the image within the element */
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &-title {
+    flex: 1;
+    margin: 0;
+    text-shadow: 1px 1px #fff;
+    margin-bottom: 0.75rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 1.3rem;
+    padding: 0 0 0 0.5rem;
+  }
+
+  &-info {
+    display: flex;
+    flex: 1;
+    font-size: 0.85rem;
+    justify-content: flex-end;
+    border-bottom: 1px solid $dark-gray;
+    margin-left: 0.5rem;
+
+    & span {
+      padding-top: 0.1rem;
+      margin: 0 0.25rem;
+
+      &:nth-of-type(2) {
+        margin-left: 1.25rem;
+      }
+    }
+
+    & a {
+      color: #333333;
+
+      &:hover {
+        color: $highlight;
+      }
+    }
+  }
+
+  &-body {
+    margin-left: 1rem;
+    display: none;
+
+    & img {
+      display: none;
+    }
+  }
+
+  &-section {
+    width: 12rem;
+    margin-top: -0.25rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+
+    &--primary {
+      color: #eee;
+      background: $primary;
+      padding: 0.4rem 0rem;
+    }
+
+    &--teal {
+      color: #000;
+      background: $teal;
+      padding: 0.4rem 0rem;
+    }
+  }
+
+  @media(min-width: $tablet) {
+
+    margin: 0.5rem 0.5rem 0.5rem 2rem;
+
+    &-item {
+      height: 100px;
+      margin-bottom: 4rem;
+    }
+
+    &-img {
+      flex: 1 0 100px;
+    }
+
+    &-title {
+      font-size: 1.4rem;
+      line-height: 1.75rem;
+    }
+
+    &-body {
+      display: block;
+      padding: 0rem 1rem 0rem 0;
+      overflow: hidden;
+    }
+  }
+
+  @media(min-width: $small-screen) {
+
+    margin-right: 0;
+
+    &-item {
+      height: 125px;
+    }
+
+    &-img {
+      flex: 1 0 125px;
+    }
+
+    &-title {
+      font-size: 1.6rem;
+    }
+
+    &-body {
+
+    }
+  }
+
+  @media(min-width: $large-screen) {
+
+    margin-right: 0;
+
+    &-item {
+      height: 160px;
+    }
+
+    &-img {
+      flex: 1 0 160px;
+    }
+
+    &-title {
+      font-size: 1.6rem;
+    }
+
+    &-body {
+
+    }
+  }
+}

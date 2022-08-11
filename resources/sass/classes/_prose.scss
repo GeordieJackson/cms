@@ -1,0 +1,152 @@
+.prose {
+
+  $prose-h-padding: 2rem; // Used to align asides to the right margin
+  font-size: 1.15rem;
+  line-height: 1.5rem;
+  padding: 0rem $prose-h-padding 1rem;
+
+  color: #333;
+
+  & h3 {
+    font-size: 1.6rem;
+    margin: 1.5rem 0;
+  }
+
+  & figure {
+    grid-column: 1 / -1;
+    margin: 1rem 0;
+  }
+
+  & ol, ul {
+    margin: 2rem 0;
+  }
+
+  & li {
+    margin-bottom: 0rem;
+  }
+
+  & p {
+
+  }
+
+  & a {
+    border-bottom: 2px dashed $lowlight;
+
+    &:hover {
+      color: #333;
+      background: #ddd;
+    }
+  }
+
+  & blockquote {
+    border-left: 6px solid #888;
+    padding: 1px 1.5rem;
+
+    & p {
+      color: #666;
+    }
+  }
+
+  & footer {
+
+    & cite {
+      font-size: 1rem;
+      line-height: 1.1rem;
+    }
+
+    & a {
+      border-bottom: none;
+      color: $primary;
+
+      &:hover {
+        color: #333;
+        background: #ddd;
+      }
+    }
+  }
+
+  & aside {
+    display: block;
+    float: right;
+    width: 9rem;
+    background: #eee;
+    padding: .75rem;
+    //   border: 1px solid #5C6467;
+    margin: 0 (-$prose-h-padding) 1rem 1rem;
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.1rem;
+    font-style: italic;
+  }
+
+  & img {
+    float: right;
+    padding: 0 0 1rem 1rem;
+    max-width: 40%;
+    height: auto;
+  }
+
+  /*  NOTE: This is used for the argument box display*/
+  & table {
+    margin-top: -1rem;
+    margin-bottom: 2rem;
+
+    & td {
+      padding: 0.5rem 0.5rem;
+      vertical-align: top;
+
+      &:nth-of-type(odd) {
+        padding-left: 1rem;
+        text-align: right;
+      }
+
+      &:nth-of-type(even) {
+
+      }
+    }
+
+  }
+
+  @media(min-width: $tablet) {
+    max-width: $max-text-width;
+
+    /*  NOTE: This is used for the argument box display*/
+    & table {
+
+      & td {
+
+        &:nth-of-type(odd) {
+          padding-left: 2rem;
+        }
+
+        &:nth-of-type(even) {
+
+        }
+      }
+
+    }
+  }
+
+  @media(min-width: $small-screen) {
+    max-width: $max-text-width;
+
+    font-size: 1.25rem;
+    line-height: 1.6rem;
+
+    /*  NOTE: This is used for the argument box display*/
+    & table {
+
+      & td {
+
+        &:nth-of-type(odd) {
+          padding-left: 3rem;
+        }
+
+        &:nth-of-type(even) {
+
+        }
+      }
+
+    }
+  }
+}

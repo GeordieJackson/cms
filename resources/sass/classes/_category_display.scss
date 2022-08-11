@@ -1,0 +1,43 @@
+$title-box-padding: 10px;
+
+.category_display {
+
+  display: flex;
+  flex-direction: column;
+  padding: 0.4rem 1rem 1rem 0;
+
+  &-box {
+    margin: 1rem;
+    flex: 0 1 auto;
+
+    &-header {
+      background: linear-gradient(to right, #e6e6e6, #f6f6f6);
+      padding: $title-box-padding;
+      border-left: 0.75rem solid $highlight;
+      border-bottom: 2px solid #000;
+      text-shadow: 2px 2px #fff;
+      font-size: 0.8rem;
+      font-weight: bold;
+    }
+
+    &-list {
+      margin: 0 0 0 2rem;
+      padding: 0.5rem;
+      border-left: 1px solid #999;
+    }
+  }
+
+  @media(min-width: $tablet) {
+    flex-direction: row;
+    justify-content: center;
+
+    &-box {
+      flex: 1;
+
+      &-header {
+        font-size: 1rem;
+      }
+    }
+
+  }
+}

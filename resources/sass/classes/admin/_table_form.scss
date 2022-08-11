@@ -1,0 +1,45 @@
+.table_form {
+  table-layout: fixed;
+  border: 2px solid #ccc;
+  border-collapse: collapse;
+  width: 100%;
+  //box-shadow: 5px 5px 10px #ccc;
+
+  & tr {
+    background: #f0f0f0;
+
+    &:nth-of-type(even) {
+      background: #d8d8d8;
+    }
+
+    &:last-of-type {
+     // border-bottom: 2px solid #999;
+    }
+  }
+
+  th {
+    padding: 0.75rem;
+    background: #333;
+    color: #fff;
+  }
+
+  & th, td {
+
+  }
+
+  & td {
+    padding: 0.25rem;
+  }
+
+  & input {
+    width: 100%;
+    padding: 0.25rem;
+    background: transparent;
+    border: 3px solid transparent;
+
+    &:focus {
+      background: #fff;
+      border: 3px solid $highlight;
+    }
+  }
+}

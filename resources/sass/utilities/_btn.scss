@@ -1,0 +1,132 @@
+@mixin hover {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.btn {
+  padding: .5rem 1.25rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: normal;
+  @include hover;
+
+  &-sm {
+    padding: .33rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: normal;
+    @include hover;
+  }
+
+  &-xs {
+    padding: .15rem 0.35rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: normal;
+    @include hover;
+  }
+
+  &-lg {
+    padding: .5rem 1.25rem;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    font-weight: normal;
+    @include hover;
+  }
+
+  &-xl {
+    padding: .65rem 1.75rem;
+    border-radius: 4px;
+    font-size: 1.5rem;
+    font-weight: normal;
+  }
+
+  &-disabled {
+    background: $medium-gray;
+    color: #000;
+    border: 1px solid #666;
+    opacity: 0.85;
+
+    &:hover {
+      cursor: not-allowed;
+    }
+  }
+
+  &-primary {
+    background: $primary;
+    color: #fff;
+    border: 1px solid $primary;
+    //@apply bg-blue-700 text-white border border-blue-700;
+
+    &:hover {
+      background: #399bdc;
+      cursor: pointer;
+    }
+  }
+
+  &-secondary {
+    color: #eee;
+    background: #545454;
+    border: 1px solid #212121;
+
+    &:hover {
+      background: #767676;
+      cursor: pointer;
+    }
+  }
+
+  &-success {
+    background: $green;
+    color: #fff;
+    border: 1px solid $green;
+    //@apply bg-green-700 text-white border border-green-700;
+    &:hover {
+      background: #66DD66;
+      cursor: pointer;
+    }
+  }
+
+  &-info {
+    background: #2B6CB0;
+    color: #fff;
+    border: 1px solid #2B6CB0;
+
+    &:hover {
+      background: #66D;
+      cursor: pointer;
+    }
+  }
+
+  &-warning {
+    background: $yellow;
+    border: 1px solid $yellow;
+
+    &:hover {
+      background: #ffcf22;
+      cursor: pointer;
+    }
+  }
+
+  &-danger {
+    background: $red;
+    color: #fff;
+    border: 1px solid $red;
+
+    //  @apply bg-red-700 text-white border border-red-700;
+    &:hover {
+      background: #ee6d59;
+      cursor: pointer;
+    }
+  }
+
+  &-link {
+    background: transparent;
+    border-radius: 0;
+    border: 0;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

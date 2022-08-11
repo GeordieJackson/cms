@@ -1,0 +1,1 @@
+<nav class="breadcrumb"><b>Location:</b>&nbsp;&nbsp;{!! $breadcrumb !!}</nav>

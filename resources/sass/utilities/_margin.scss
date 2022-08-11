@@ -1,0 +1,44 @@
+$basename: '.m';
+$cssName: margin;
+$variants: ('', top, right, bottom, left, x, y);
+
+$start: 0;
+$end: 36;
+$prefix: '-';
+$interval: 0.25;
+$unit: rem;
+
+@each $variant in $variants {
+
+    @for $x from $start through $end {
+
+        #{$basename}#{str-slice($variant, 0 , 1)}#{$prefix}#{$x} {
+
+            @if ($variant == '') {
+                #{$cssName}: ($interval * $x) + #{$unit};
+            }
+
+            @if ($variant == top or $variant == y) {
+                #{$cssName}-top: ($interval * $x) + #{$unit};
+            }
+
+            @if ($variant == bottom or $variant == y) {
+                #{$cssName}-bottom: ($interval * $x) + #{$unit};
+            }
+
+            @if ($variant == right or $variant == x) {
+                #{$cssName}-right: ($interval * $x) + #{$unit};
+            }
+
+            @if ($variant == left or $variant == x) {
+                #{$cssName}-left: ($interval * $x) + #{$unit};
+            }
+        }
+    }
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+

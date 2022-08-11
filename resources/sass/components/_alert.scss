@@ -1,0 +1,161 @@
+$top-border-width: 0.5rem;
+
+@mixin alert {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  min-width: 30rem;
+  padding: 0.4rem 0.5rem;
+  border: 1px solid;
+  border-top: $top-border-width solid;
+}
+
+@mixin alert-icon {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 10rem;
+  height: 1.5rem;
+}
+
+.alert {
+
+  display: none;
+
+  &-top-row {
+    display: flex;
+    align-items: flex-start;
+    flex: 1;
+    height: 1.5rem;
+  }
+
+  &-success {
+    @include alert;
+    background-color: #e6fffa;
+    border-color: teal;
+    border-top-color: teal;
+    color: #000;
+
+    & .alert-icon {
+      @include alert-icon;
+      color: teal;
+
+      &::after {
+        content: "\f058";
+      }
+    }
+  }
+
+  &-info {
+    @include alert;
+    background-color: #e6eeff;
+    border-color: #36c;
+    border-top-color: #36c;
+    color: #000;
+
+    & .alert-icon {
+      @include alert-icon;
+      color: #66f;
+
+      &::after {
+        content: "\f05a";
+      }
+    }
+  }
+
+  &-warning {
+    @include alert;
+    background-color: #ffd;
+    border-color: #ff6;
+    border-top-color: #666;
+    color: #000;
+
+    & .alert-icon {
+      @include alert-icon;
+      color: #000;
+
+      &::after {
+        content: "\f071";
+      }
+    }
+  }
+
+  &-danger {
+    @include alert;
+    background-color: #fee;
+    border-color: #666;
+    border-top-color: #f33;
+    color: #000;
+
+    & .alert-icon {
+      @include alert-icon;
+      color: #000;
+
+      &::after {
+        content: "\f7ba";
+      }
+    }
+  }
+
+  &-body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex: 1;
+    padding: 0;
+
+    & p {
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  &-message {
+    margin: 0;
+    padding: 0 1rem;
+    flex: 1;
+
+    &-title {
+      font-weight: bold;
+    }
+
+    &-text {
+      margin-top: 0rem;
+      font-size: 1rem;
+    }
+  }
+
+  &-level {
+    display: flex;
+    align-items: flex-end;
+    flex: 30;
+    padding-left: 0.5rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    height: inherit;
+  }
+
+  &-close {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 2rem;
+    color: #333;
+    height: 1.5rem;
+
+    span:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+

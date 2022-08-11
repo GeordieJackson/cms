@@ -1,0 +1,178 @@
+.responsive_table {
+	//border: 1px solid #ccc;
+	font-size: 0.9em;
+	width: 100%;
+	border-collapse: collapse;
+
+	&-no_results { // Use this for the no results found message
+		& div, p {
+			display: flex;
+			justify-content: center;
+		}
+	}
+
+	& caption {
+		width: 100%;
+		padding: 0.5em;
+		font-weight: bold;
+		font-size: 1.3em;
+	}
+
+	& thead {
+		& tr {
+		//	background: #ddd;
+			color: #333333;
+			border-bottom: 4px double #666;
+			font-size: 1.2em;
+		}
+
+		& th {
+			&:first-of-type {
+				width: auto;
+			}
+
+			padding: 0.65rem 1rem;
+			white-space: nowrap;
+			width: 10rem;
+
+			&:nth-last-of-type(6) {
+				width: 9rem;
+			}
+
+			&:nth-last-of-type(5) {
+				width: 11rem;
+			}
+
+			&:nth-last-of-type(4) {
+				width: 6rem;
+			}
+
+			&:nth-last-of-type(3) {
+				width: 11rem;
+				white-space: nowrap;
+			}
+
+			&:nth-last-of-type(2) {
+				width: 3rem;
+			}
+
+			&:nth-last-of-type(1) {
+				width: 3rem;
+			}
+		}
+	}
+
+	& tbody {
+		& tr {
+			background: transparent;
+			&:nth-child(even) {
+		//		background-color: #f3f3f3;
+			}
+
+			&:hover {
+				background-color: #f3f3f3;
+			}
+		}
+
+		& tr.responsive_table--no-hover:hover {
+			background-color: transparent;
+		}
+
+		& td:not(.responsive_table-no_results) {
+            font-size: 0.9rem;
+			padding: 0.5rem 1rem;
+			border-bottom: 1px dashed #ccc;
+			border-right: 1px dotted #ccc;
+
+			&:last-of-type {
+				border-right: none;
+
+				&:hover {
+					background-color: transparent;
+				}
+			}
+		}
+	}
+
+	& tfoot {
+		& td {
+			padding: 0.5em;
+		}
+	}
+
+	@media (max-width: $tablet) {
+
+		border: none;
+		display: block;
+		text-align: left;
+		white-space: normal;
+
+		& tbody, tfoot, tr, th, td {
+			display: block;
+			text-align: left !important;
+			white-space: normal;
+			padding: 0.5em;
+		}
+
+		& thead {
+			& tr {
+				position: absolute;
+				top: -9999px;
+				left: -9999px;
+			}
+		}
+
+		& tbody {
+			& tr {
+			//	border: 2px solid #666;
+				border-bottom: none;
+				&:last-child {
+			//		border-bottom: 2px solid #5C6467;
+				}
+			}
+			& td:not(.responsive_table-no_results) {
+				/* Behave  like a "row" */
+				border: none;
+			//	border-bottom: 1px solid #999;
+				position: relative;
+				padding-left: 8.5rem;
+				text-align: left;
+				&:last-child {
+					border: 0;
+				}
+				&:before {
+					/* Now like a table header */
+					position: absolute;
+					content: attr(data-label);
+					/* Top/left values mimic padding */
+					top: 0.5em;
+					left: 0.5em;
+					width: 7.5em;
+					border-right: 2px inset #666;
+					white-space: nowrap;
+					font-weight: bold;
+				}
+			}
+		}
+	}
+	&-clickable:hover {
+		background: lightblue;
+		cursor: pointer;
+	}
+	&-center { // center align fields in full screen - left align in small screen
+		text-align: center;
+		@media(max-width: 1000px) {
+			text-align: left;
+		}
+	}
+	& input[type=checkbox] {
+		transform: scale(1.35);
+	}
+}
+
+.responsive_table-center.responsive_table-center { // center align fields in full screen - left align in small screen
+	text-align: center;
+	@media(max-width: 1000px) {
+		text-align: left;
+	}
+}

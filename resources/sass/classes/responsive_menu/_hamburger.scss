@@ -1,0 +1,15 @@
+.hamburger {
+
+  margin-left: 0.25rem;
+  margin-right: 0.5rem;
+  font-size: 1.6rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+
+  @media(min-width: $tablet) {
+    display: none;
+  }
+}

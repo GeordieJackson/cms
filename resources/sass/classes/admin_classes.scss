@@ -1,0 +1,18 @@
+@import "admin/layout";
+@import "admin/menu_vertical";
+@import "../utilities/flex";
+@import "admin/dashbox";
+@import "admin/post_container";
+@import "admin/options_bar";
+//@import "admin/table_form";
+//@import "resources/sass/components/btn";
+@import "../classes/responsive_table";
+@import "../classes/form";
+@import "../classes/pagination";
+
+@import "../utilities/utilities";
+
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/regular";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/brands";

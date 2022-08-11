@@ -1,0 +1,38 @@
+// Widths and breakpoints
+$container-width: 1440px;
+$content-width: 100%;
+$max-text-width: 60rem;
+
+$large-screen: 1260px;
+$small-screen: 1024px;
+$tablet: 768px;
+
+$u-border-color: #666;
+
+//// Colors
+$veryHighLight: #9FD9D9;
+$highlight: #026F6F;
+$lowlight: #397373;
+$dark-contrast: #242525;
+
+$indigo: #6574cd;
+$purple: #9561e2;
+$pink: #f66d9b;
+$red: #e3342f;
+$orange: #f6993f;
+$yellow: #ffed4a;
+$green: #66BB66;
+$teal: #4dc0b5;
+$cyan: #6cb2eb;
+
+$primary: #1779ba;
+$secondary: #767676;
+$success: #3adb76;
+$warning: #ffae00;
+$alert: #cc4b37;
+
+$light-gray: #e6e6e6;
+$medium-gray: #cacaca;
+$dark-gray: #8a8a8a;
+$black: #000000;
+$white: #ffffff;

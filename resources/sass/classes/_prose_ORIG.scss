@@ -1,0 +1,61 @@
+.prose {
+  display: grid;
+  font-family: 'Roboto', sans-serif;
+  color: #222;
+  font-size: 16px;
+  line-height: 1.4rem;
+  padding: 1rem;
+
+  > * {
+    grid-column: 2;
+    min-width: 0;
+  }
+
+  & h3 {
+    margin: 0.5rem 0;
+  }
+
+  & figure {
+    grid-column: 1 / -1;
+    margin: 1rem 0;
+  }
+
+  & ol, ul {
+    margin: 0;
+  }
+
+  & li {
+    margin: 1rem 0;
+  }
+
+  & p {
+    margin: 0.5rem 0;
+  }
+
+  & aside {
+    display: none;
+  }
+
+  & img {
+    float: right;
+    padding: 0 0 1rem 1rem;
+  }
+
+  @media(min-width: $tablet) {
+    grid-template-columns: 0 1fr 8rem;
+    grid-column-gap: 1.5rem;
+    max-width: $max-text-width;
+
+    & aside {
+      display: block;
+      grid-column: 3;
+      height: 0;
+      overflow: visible;
+      color: #666;
+      font-size: 0.9rem;
+      line-height: 1.1rem;
+      margin-top: 0.75rem;
+      font-style: italic;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+﻿// Fonts
+// @import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+// @import url('//db.onlinewebfonts.com/c/f1fb66a43cb92f1308580741725258e1?family=Acuta');
+// @import url('https://fonts.googleapis.com/css?family=Bree+Serif&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,700;1,400;1,700&display=swap'); // Very good at small sizes
+// @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400&display=swap');
+// @import url(//db.onlinewebfonts.com/c/4119f2f793f60df049502711f3076133?family=Austin+News+Text+Web+Roman);
+
+// Font Awesome
+//@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+//@import "~@fortawesome/fontawesome-free/scss/regular";
+//@import "~@fortawesome/fontawesome-free/scss/solid";
+//@import "~@fortawesome/fontawesome-free/scss/brands";
+
+// Icomoon
+@import "icomoon";
+
+
+// Note: see also in _resets where other body properties are set
+body {
+  font-family: "Roboto";
+  line-height: 1.3rem;
+}

@@ -1,0 +1,48 @@
+$pag-color: $lowlight;
+$pag-contrast: $light-gray;
+$pag-button-size: 2.5rem;
+
+.pagination {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #ccc;
+
+  & ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 1rem 0;
+
+    & li {
+      display: inline-flex;
+      flex: 1;
+    }
+  }
+
+  & button {
+    border: 1px solid #ccc;
+    width: $pag-button-size;
+    height: $pag-button-size;
+    background-color: #f3f3f3;
+  }
+
+  & .pagination-clickable {
+    cursor: pointer;
+
+    &:hover {
+      background-color: $veryHighLight;
+    }
+  }
+
+  & .pagination-active {
+    background-color: $pag-color;
+    color: #eeeeee;
+  }
+
+
+  @media(min-width: $tablet) {
+
+  }
+}
