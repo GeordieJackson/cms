@@ -20,19 +20,19 @@
                 0 =>
                     [
                         'id' => 1,
-                        'forename' => 'John',
-                        'surname' => 'Jackson',
-                        'email' => 'john@johnjackson.me.uk',
+                        'forename' => 'Ad',
+                        'surname' => 'Min',
+                        'email' => 'admin@cms.test',
                         'slug' => 'john-jackson',
-                        'email_verified_at' => '2021-05-03 15:47:59',
-                        'password' => '$2y$10$v7GLhO8xq3sVZ1ayuYcCJOtb8WJsn9aaYAwXaLtl.tnj7tZrF0TFu',
+                        'email_verified_at' => '2022-08*03 15:47:59',
+                        'password' => '$2y$10$IrGxGa42RzzA3WJfoXGnF.f92fYPM9ZNNLZvp5CqvEWxtcvvfhGxy', // password
                         'two_factor_secret' => null,
                         'two_factor_recovery_codes' => null,
                         'remember_token' => '',
                         'current_team_id' => null,
                         'profile_photo_path' => null,
-                        'created_at' => '2021-05-03 15:47:59',
-                        'updated_at' => '2021-05-03 15:47:59',
+                        'created_at' => '2022-08*03 15:47:59',
+                        'updated_at' => '2022-08*03 15:47:59',
                     ],
                 1 =>
                     [
@@ -41,15 +41,15 @@
                         'surname' => 'Bisquits',
                         'email' => 'arthur@bisquits.co.uk',
                         'slug' => 'arthur-bisquits',
-                        'email_verified_at' => '2021-05-03 15:47:59',
-                        'password' => '$2y$10$SRHmN/UYwDcMV1tMTt2z4eCEQVMCLpFzCwjPjeOPo5oB1lnFSfdeu',
+                        'email_verified_at' => '2022-08*03 15:47:59',
+                        'password' => '$2y$10$IrGxGa42RzzA3WJfoXGnF.f92fYPM9ZNNLZvp5CqvEWxtcvvfhGxy', // password
                         'two_factor_secret' => null,
                         'two_factor_recovery_codes' => null,
                         'remember_token' => 'L7tdAvou8S',
                         'current_team_id' => null,
                         'profile_photo_path' => null,
-                        'created_at' => '2021-05-03 15:47:59',
-                        'updated_at' => '2021-05-03 15:47:59',
+                        'created_at' => '2022-08*03 15:47:59',
+                        'updated_at' => '2022-08*03 15:47:59',
                     ],
                 2 =>
                     [
@@ -58,15 +58,15 @@
                         'surname' => 'Fustees',
                         'email' => 'billy@fustees.co.uk',
                         'slug' => 'billy-fustees',
-                        'email_verified_at' => '2021-05-03 15:47:59',
-                        'password' => '$2y$10$SRHmN/UYwDcMV1tMTt2z4eCEQVMCLpFzCwjPjeOPo5oB1lnFSfdeu',
+                        'email_verified_at' => '2022-08*03 15:47:59',
+                        'password' => '$2y$10$IrGxGa42RzzA3WJfoXGnF.f92fYPM9ZNNLZvp5CqvEWxtcvvfhGxy', // password
                         'two_factor_secret' => null,
                         'two_factor_recovery_codes' => null,
                         'remember_token' => 'B8ljcZtm1R',
                         'current_team_id' => null,
                         'profile_photo_path' => null,
-                        'created_at' => '2021-05-03 15:47:59',
-                        'updated_at' => '2021-05-04 11:43:33',
+                        'created_at' => '2022-08*03 15:47:59',
+                        'updated_at' => '2022-05-04 11:43:33',
                     ],
             ]);
         }
