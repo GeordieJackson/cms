@@ -24,7 +24,7 @@ The website should be available
 
 You can log in using username: ```admin@cms.test```and password: ```password```
 
-Create some categories, temporal sections (blog, latest news, etc.) and then create some posts. The menus for the front should be built automatically and only display when content is plced in them.
+Create some categories, temporal sections (blog, latest news, etc.) and then create some posts. The menus for the front should be built automatically and only display when content is placed in them.
 
 Users can be assigned roles and roles assigned permissions.
 
